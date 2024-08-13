@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.3 on win32)" generated="2024-08-13T10:20:50.757511" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot library" source="c:\Users\20230308\Desktop\Albert_Robot\Robot_library.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-08-13T10:20:51.095904" level="INFO">Opening browser 'chrome' to base url 'https://rwd-library.taichung.gov.tw/webpac_rwd/search.cfm'.</msg>
+<arg>https://rwd-library.taichung.gov.tw/webpac_rwd/search.cfm</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-13T10:20:51.094904" elapsed="25.506690"/>
+</kw>
+<test id="s1-t1" name="test_01-一般搜尋&quot;三國演義&quot;" line="17">
+<kw name="視窗Max">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-13T10:21:16.621275" elapsed="0.043172"/>
+</kw>
+<status status="PASS" start="2024-08-13T10:21:16.619274" elapsed="0.046174"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:16.669002" level="INFO">Typing text '三國演義' into text field 'xpath=//*[@id="ss_keyword"]'.</msg>
+<arg>xpath=//*[@id="ss_keyword"]</arg>
+<arg>${Book_01}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T10:21:16.667490" elapsed="0.103969"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:16.773460" level="INFO">Clicking button '//*[@id="search"]/div[1]/div[1]/input'.</msg>
+<arg>//*[@id="search"]/div[1]/div[1]/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T10:21:16.772459" elapsed="0.846742"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="body"]/footer</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-13T10:21:17.624195" elapsed="0.080793"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:17.706988" level="INFO">Verifying element '//*[@id="wrap"]/div[3]/div/div[2]/div[3]/div[2]/div[1]/a/mark' contains exact text '三國演義'.</msg>
+<arg>//*[@id="wrap"]/div[3]/div/div[2]/div[3]/div[2]/div[1]/a/mark</arg>
+<arg>${Book_01}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-13T10:21:17.705989" elapsed="0.018975"/>
+</kw>
+<doc>測項1:一般搜尋，預期能搜尋到對應書本</doc>
+<tag>一般搜尋測試</tag>
+<status status="PASS" start="2024-08-13T10:21:16.604594" elapsed="1.121369"/>
+</test>
+<test id="s1-t2" name="test_02-Click_&quot;三國演義&quot;，進入詳細書本頁面" line="28">
+<kw name="視窗Max">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-13T10:21:17.733970" elapsed="0.002992"/>
+</kw>
+<status status="PASS" start="2024-08-13T10:21:17.733970" elapsed="0.002992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:17.739965" level="INFO">Typing text '三國演義' into text field 'xpath=//*[@id="ss_keyword"]'.</msg>
+<arg>xpath=//*[@id="ss_keyword"]</arg>
+<arg>${Book_01}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T10:21:17.737972" elapsed="0.061008"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:17.799979" level="INFO">Clicking element '//*[@id="search"]/div[1]/div[1]/input'.</msg>
+<arg>//*[@id="search"]/div[1]/div[1]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T10:21:17.799979" elapsed="0.658244"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="body"]/footer</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-13T10:21:18.459224" elapsed="0.015343"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:18.476567" level="INFO">Clicking element 'xpath=//*[@id="wrap"]/div[3]/div/div[2]/div[3]/div[2]/div[2]/a[2]'.</msg>
+<arg>xpath=//*[@id="wrap"]/div[3]/div/div[2]/div[3]/div[2]/div[2]/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T10:21:18.475567" elapsed="1.169582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/footer</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-13T10:21:19.646148" elapsed="0.023571"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:19.673104" level="INFO">Verifying element '//*[@id="wrap"]/div[3]/div/div[2]/div[3]/div[2]/div[1]' contains exact text '三國演義[JB]'.</msg>
+<arg>//*[@id="wrap"]/div[3]/div/div[2]/div[3]/div[2]/div[1]</arg>
+<arg>${BookData_01}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-13T10:21:19.671104" elapsed="0.028115"/>
+</kw>
+<doc>測項2:點選清單書本，預期能進到書本詳細頁面，且資訊正確</doc>
+<tag>一般搜尋測試</tag>
+<status status="PASS" start="2024-08-13T10:21:17.727962" elapsed="1.973252"/>
+</test>
+<test id="s1-t3" name="test_03-連結驗證" line="41">
+<kw name="視窗Max">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-13T10:21:19.710673" elapsed="0.005997"/>
+</kw>
+<status status="PASS" start="2024-08-13T10:21:19.708668" elapsed="0.008002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:19.720634" level="INFO">Clicking element 'xpath=//*[@id="menu"]/div/nav/div/ul[1]/li[5]'.</msg>
+<arg>xpath=//*[@id="menu"]/div/nav/div/ul[1]/li[5]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T10:21:19.718635" elapsed="0.289650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/footer</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-13T10:21:20.011556" elapsed="0.012106"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:20.025670" level="INFO">Verifying element '//*[@id="form1"]/div/p' contains exact text '公佈欄'.</msg>
+<arg>//*[@id="form1"]/div/p</arg>
+<arg>${Link_01}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-13T10:21:20.024660" elapsed="0.016418"/>
+</kw>
+<doc>測項3:公佈欄Link預期正確導航到頁面</doc>
+<tag>頁面連結驗證</tag>
+<status status="PASS" start="2024-08-13T10:21:19.703637" elapsed="0.338475"/>
+</test>
+<test id="s1-t4" name="test_04-語言切換功能驗證" line="51">
+<kw name="視窗Max">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-13T10:21:20.050155" elapsed="0.002926"/>
+</kw>
+<status status="PASS" start="2024-08-13T10:21:20.049158" elapsed="0.003923"/>
+</kw>
+<kw name="切換語言(English)">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:20.056090" level="INFO">Clicking element 'xpath=//*[@id="menu"]/div/div[2]/div/a[2]'.</msg>
+<arg>xpath=//*[@id="menu"]/div/div[2]/div/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-13T10:21:20.056090" elapsed="0.317701"/>
+</kw>
+<status status="PASS" start="2024-08-13T10:21:20.055084" elapsed="0.318707"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-13T10:21:20.375791" level="INFO">Verifying element '//*[@id="menu"]/div/nav/div/ul[1]/li[1]' contains exact text 'Search'.</msg>
+<arg>//*[@id="menu"]/div/nav/div/ul[1]/li[1]</arg>
+<arg>${Language}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-13T10:21:20.374790" elapsed="0.017001"/>
+</kw>
+<doc>測項4:切換語言後，預期頁面能顯示選擇語言</doc>
+<tag>切換語言</tag>
+<status status="PASS" start="2024-08-13T10:21:20.044082" elapsed="0.347709"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-13T10:21:20.394802" elapsed="2.123431"/>
+</kw>
+<doc>圖書館頁面功能測試</doc>
+<status status="PASS" start="2024-08-13T10:20:50.767890" elapsed="31.751441"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">一般搜尋測試</stat>
+<stat pass="1" fail="0" skip="0">切換語言</stat>
+<stat pass="1" fail="0" skip="0">頁面連結驗證</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Robot library">Robot library</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
